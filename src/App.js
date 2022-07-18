@@ -1,4 +1,5 @@
-import MotorcycleDetails from './pages/MotorcycleDetails'
+import MotorcycleDetails from './pages/MotorcycleDetails';
+
 function App() {
   return (
     <div className="App">
