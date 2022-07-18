@@ -3,7 +3,7 @@ import NavBar from './side_navbar/Navbar';
 
 function App() {
   return (
-    <div className="App relative min-h-screen flex">
+    <div className="relative min-h-screen md:flex">
       <NavBar />
       <div>
         {' '}
