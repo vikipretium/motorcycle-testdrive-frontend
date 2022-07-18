@@ -1,7 +1,8 @@
+import MotorcycleDetails from './pages/MotorcycleDetails'
 function App() {
   return (
     <div className="App">
-      <h1>Hello guys form Nepal</h1>
+      <MotorcycleDetails />
     </div>
   );
 }
