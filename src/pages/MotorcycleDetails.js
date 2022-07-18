@@ -20,7 +20,12 @@ const MotorcycleDetails = () => (
           <p>Total amount payable: $37000</p>
           <p>Duration: 24 months</p>
         </div>
-        
+        <div>
+          <button type="button" className="bg-amber-500    hover:bg-amber-600/80 text-white font-bold py-2 px-4 rounded w-52">
+            Reserve
+          </button>
+        </div>
+        <span />
       </div>
     </div>
 </div>    
