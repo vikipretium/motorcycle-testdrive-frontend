@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
   const [isActive, setActive] = useState(true);
@@ -35,18 +36,26 @@ function NavBar() {
       >
         <p className="py-6"> Logo </p>
         <nav>
-          <a href="#home" className="block py-5 px-5 rounded transition duration 300 hover:bg-blue-500 hover:text-white">
-            <p> MODELS </p>
-          </a>
-          <a href="#home" className="block py-5 px-5 rounded transition duration 300 hover:bg-blue-500 hover:text-white">
-            <p>RESERVE </p>
-          </a>
-          <a href="#home" className="block py-5 px-5 rounded transition duration 300 hover:bg-blue-500 hover:text-white">
-            <p> RESERVATIONS </p>
-          </a>
-          <a href="#home" className="block py-5 px-5 rounded transition duration 300 hover:bg-blue-500 hover:text-white">
-            <p> SIGN OUT </p>
-          </a>
+          <Link to="/models">
+            <p className="block py-5 px-5 rounded transition duration 300 hover:bg-blue-500 hover:text-white">
+              MODELS
+            </p>
+          </Link>
+          <Link to="/addreservation">
+            <p className="block py-5 px-5 rounded transition duration 300 hover:bg-blue-500 hover:text-white">
+              RESERVE
+            </p>
+          </Link>
+          <Link to="/myreservations">
+            <p className="block py-5 px-5 rounded transition duration 300 hover:bg-blue-500 hover:text-white">
+              RESERVATIONS
+            </p>
+          </Link>
+          <Link to="/auth">
+            <p className="block py-5 px-5 rounded transition duration 300 hover:bg-blue-500 hover:text-white">
+              SIGN OUT
+            </p>
+          </Link>
         </nav>
       </div>
     </>
