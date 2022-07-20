@@ -1,6 +1,8 @@
 import './App.css';
-import { Outlet } from 'react-router-dom';
-import NavBar from './side_navbar/Navbar';
+// import { Outlet } from 'react-router-dom';
+// import NavBar from './side_navbar/Navbar';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { Routes, Route, Link } from 'react-router-dom';
 
 function App() {
   return (
