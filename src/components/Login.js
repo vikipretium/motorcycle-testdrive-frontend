@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Login = () => (
-  <form>
+  <form className="auth-form">
     <h3>Sign in</h3>
     <div className="mb-3">
       <label htmlFor="email-address">Email Address</label>
