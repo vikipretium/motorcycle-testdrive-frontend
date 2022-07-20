@@ -7,7 +7,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 function App() {
   return (
     <div className="relative min-h-screen md:flex">
-      <NavBar />
+      {/* <NavBar /> Add conditional to show display navbar when user is logged in */}
       <div>
         {/* Put all other content in this div  */}
         <h1>Motocycle Book</h1>
