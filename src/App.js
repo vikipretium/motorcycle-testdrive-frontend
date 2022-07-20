@@ -10,8 +10,37 @@ function App() {
       {/* <NavBar /> Add conditional to show display navbar when user is logged in */}
       <div>
         {/* Put all other content in this div  */}
-        <h1>Motocycle Book</h1>
-        <Outlet />
+        <nav className="navbar navbar-expand-lg navbar-light fixed-top">
+          <div className="container">
+            <Link className="navbar-brand" to="/sign-in">
+              MotorHub
+            </Link>
+            <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul className="navbar-nav ml-auto">
+                <li className="nav-item">
+                  <Link className="nav-link" to="/sign-in">
+                    login
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/sign-up">
+                    sign up
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div className="auth-wrapper">
+          <div className="auth-inner">
+            <Routes>
+              <Route exact path="/" element={<Login />} />
+              <Route path="/sign-in" element={<Login />} />
+              <Route path="/sign-in" element={<SignUp />} />
+            </Routes>
+          </div>
+        </div>
+        {/* <Outlet /> */}
       </div>
     </div>
   );
