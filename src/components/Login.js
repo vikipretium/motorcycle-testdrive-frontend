@@ -1,5 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import {React, useRef, useEffect, useState } from 'react';
+import {
+  React, useRef, useEffect, useState,
+} from 'react';
 
 const Login = () => {
   const userRef = useRef();
@@ -12,7 +14,7 @@ const Login = () => {
 
   useEffect(() => {
     userRef.current.focus();
-  }, [])
+  }, []);
 
   useEffect(() => {
     setErrMsg('');
@@ -51,29 +53,32 @@ const Login = () => {
                 id="email-address"
                 ref={userRef}
                 onChange={(e) => setUser(e.target.value)}
-          placeholder="Enter your email"
+                placeholder="Enter your email"
                 value={user}
                 required
-        />
-      </div>
-      <div className="mb-3">
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="password">Password</label>
+              <input
+                type="password"
                 id="password"
                 onChange={(e) => setPwd(e.target.value)}
                 value={pwd}
-          className="form-control"
-          placeholder="Enter password"
-        />
-      </div>
-      <div className="d-grid">
-        <button type="submit" className="btn btn-primary">
-          submit
-        </button>
-      </div>
-    </form>
+                className="form-control"
+                placeholder="Enter password"
+              />
+            </div>
+            <div className="d-grid">
+              <button type="submit" className="btn btn-primary">
+                submit
+              </button>
+            </div>
+          </form>
+        </section>
+      )}
+    </>
   );
-}
+};
 
 export default Login;
