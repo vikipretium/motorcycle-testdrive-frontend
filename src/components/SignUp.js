@@ -1,6 +1,11 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 
+const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+const NAME_REGEX = /^[a-zA-Z]+$/;
+const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
+
 const SignUp = () => (
   <form className="auth-form">
     <h3>Sign up</h3>
