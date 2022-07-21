@@ -6,6 +6,11 @@ import {
 const SignUp = () => {
   const errRef = useRef();
 
+  const [user, setUser] = useState('');
+  const [pwd, setPwd] = useState('');
+  const [email, setEmail] = useState('');
+  const [errMsg, setErrMsg] = useState('');
+  const [success, setSuccess] = useState(false);
 
   useEffect(() => {
     setErrMsg('');
