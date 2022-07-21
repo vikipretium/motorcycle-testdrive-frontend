@@ -1,6 +1,7 @@
 import './App.css';
 import { Outlet } from 'react-router-dom';
 import NavBar from './side_navbar/Navbar';
+import MotorcycleDetails from './pages/MotorcycleDetails';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         {/* Put all other content in this div  */}
         <Outlet />
       </div>
+
     </div>
   );
 }
