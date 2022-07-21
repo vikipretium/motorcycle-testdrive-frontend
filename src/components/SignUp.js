@@ -91,6 +91,11 @@ const SignUp = () => {
                 <a href="/sign-in">sign in</a>
               </p>
             </form>
+          </section>
+        )
+}
+    </>
   );
+};
 
 export default SignUp;
