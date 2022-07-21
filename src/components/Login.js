@@ -27,13 +27,27 @@ const Login = () => {
   };
 
   return (
-    <form className="auth-form">
-      <h3>Sign in</h3>
-      <div className="mb-3">
-        <label htmlFor="email-address">Email Address</label>
-        <input
-          type="email"
-          className="form-control"
+    <>
+      {success ? (
+        <section>
+          <h1>you are logged in</h1>
+          <br />
+          <p>
+            <a href="/">go to home</a>
+          </p>
+        </section>
+      ) : (
+        <section>
+          <p ref={errRef} className={errMsg ? 'errmsg' : 'offscreen'} aria-live="assertive">
+            {errMsg}
+          </p>
+          <form className="auth-form" onSubmit={handleSubmit}>
+            <h3>Sign in</h3>
+            <div className="mb-3">
+              <label htmlFor="email-address">Email Address</label>
+              <input
+                type="email"
+                className="form-control"
                 id="email-address"
                 ref={userRef}
                 onChange={(e) => setUser(e.target.value)}
