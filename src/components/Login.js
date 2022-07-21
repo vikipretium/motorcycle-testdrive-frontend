@@ -1,9 +1,11 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import {
-  React, useRef, useEffect, useState,
+  React, useRef, useEffect, useState, useContext
 } from 'react';
+import AuthContext from '../context/AuthProvider';
 
 const Login = () => {
+  const { setAuth } = useContext( AuthContext )
   const userRef = useRef();
   const errRef = useRef();
 
