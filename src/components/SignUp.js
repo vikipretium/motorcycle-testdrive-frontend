@@ -73,8 +73,11 @@ const SignUp = () => {
                 <input
                   type="password"
                   className="form-control"
+                  onChange={(e) => setPwd(e.target.value)}
+                  value={pwd}
                   placeholder="Enter password"
                   id="password"
+                  required
                 />
               </div>
               <div className="d-grid">
