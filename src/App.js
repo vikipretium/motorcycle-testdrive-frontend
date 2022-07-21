@@ -14,7 +14,7 @@ function App() {
     <Router>
       <div className="relative min-h-screen md:flex">
         {/* <NavBar /> Add conditional to show display navbar when user is logged in */}
-        <div>
+        <div className="wrapper">
           {/* Put all other content in this div  */}
           <nav className="navbar navbar-expand-lg navbar-light fixed-top">
             <div className="container">
