@@ -1,7 +1,8 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 
 const SignUp = () => (
-  <form className='auth-form'>
+  <form className="auth-form">
     <h3>Sign up</h3>
     <div className="mb-3">
       <label htmlFor="full-name">Full name</label>
