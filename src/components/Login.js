@@ -38,12 +38,17 @@ const Login = () => {
                 ref={userRef}
                 onChange={(e) => setUser(e.target.value)}
           placeholder="Enter your email"
+                value={user}
+                required
         />
       </div>
       <div className="mb-3">
         <label htmlFor="password">Password</label>
         <input
           type="password"
+                id="password"
+                onChange={(e) => setPwd(e.target.value)}
+                value={pwd}
           className="form-control"
           placeholder="Enter password"
         />
