@@ -34,6 +34,9 @@ const Login = () => {
         <input
           type="email"
           className="form-control"
+                id="email-address"
+                ref={userRef}
+                onChange={(e) => setUser(e.target.value)}
           placeholder="Enter your email"
         />
       </div>
