@@ -1,5 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React from 'react';
+import {
+  React, useRef, useEffect, useState,
+} from 'react';
 
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 const NAME_REGEX = /^[a-zA-Z]+$/;
