@@ -13,6 +13,7 @@ const REGISTER_URL = '/api/v1/register';
 
 const SignUp = () => {
   const errRef = useRef();
+  const navigate = useNavigate();
 
   const [user, setUser] = useState('');
   const [pwd, setPwd] = useState('');
