@@ -13,7 +13,7 @@ export const fetchMotorcycles = createAsyncThunk(
     const requestOptions = {
       method: 'GET',
       headers: {
-        Accept: 'text/json',
+        Accept: 'application/json',
         // Needs to be filled with Auth Header from sign in request
         // Authorization: `Bearer ${process.env.REACT_APP_CARBON_API_KEY}`,
       },
