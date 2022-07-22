@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchMotorcycles } from '../redux/motorcylce/motorcylceSlice';
 
 const ModelsHome = () => {
+  // eslint-disable-next-line no-unused-vars
   const motorcycles = useSelector((state) => state.motorcycle);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -12,9 +13,6 @@ const ModelsHome = () => {
   return (
     <div>
       <h1>Models Home Page</h1>
-      <p>
-        {motorcycles}
-      </p>
     </div>
   );
 };
