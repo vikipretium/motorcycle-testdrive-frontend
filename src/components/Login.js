@@ -60,43 +60,43 @@ const Login = () => {
       {success ? (
         navigate('/homepage')
       ) : (
-        <section>
-          <p ref={errRef} className={errMsg ? 'errmsg' : 'offscreen'} aria-live="assertive">
-            {errMsg}
-          </p>
-          <form className="auth-form" onSubmit={handleSubmit}>
-            <h3>Sign in</h3>
-            <div className="mb-3">
-              <label htmlFor="email-address">Email Address</label>
-              <input
-                type="email"
-                className="form-control"
-                id="email-address"
-                ref={userRef}
-                onChange={(e) => setUser(e.target.value)}
-                placeholder="Enter your email"
-                value={user}
-                required
-              />
-            </div>
-            <div className="mb-3">
-              <label htmlFor="password">Password</label>
-              <input
-                type="password"
-                id="password"
-                onChange={(e) => setPwd(e.target.value)}
-                value={pwd}
-                className="form-control"
-                placeholder="Enter password"
-              />
-            </div>
-            <div className="d-grid">
-              <button type="submit" className="btn btn-primary">
-                submit
-              </button>
-            </div>
-          </form>
-        </section>
+              <section>
+                <p ref={errRef} className={errMsg ? 'errmsg' : 'offscreen'} aria-live="assertive">
+                  {errMsg}
+                </p>
+                <form className="auth-form" onSubmit={handleSubmit}>
+                  <h3>Sign in</h3>
+                  <div className="mb-3">
+                    <label htmlFor="email-address">Email Address</label>
+                    <input
+                      type="email"
+                      className="form-control"
+                      id="email-address"
+                      ref={userRef}
+                      onChange={(e) => setUser(e.target.value)}
+                      placeholder="Enter your email"
+                      value={user}
+                      required
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="password">Password</label>
+                    <input
+                      type="password"
+                      id="password"
+                      onChange={(e) => setPwd(e.target.value)}
+                      value={pwd}
+                      className="form-control"
+                      placeholder="Enter password"
+                    />
+                  </div>
+                  <div className="d-grid">
+                    <button type="submit" className="btn btn-primary">
+                      submit
+                    </button>
+                  </div>
+                </form>
+              </section>
       )}
     </>
   );
