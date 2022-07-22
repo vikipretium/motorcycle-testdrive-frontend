@@ -1,11 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Logo from '../imgs/logo_plain.svg';
 
 const AuthPageNav = () => (
   <nav className="navbar navbar-expand-lg navbar-light fixed-top collapse.navbar-collapse">
     <div className="container">
       <NavLink className="navbar-brand" to="/sign-in">
-        MotorHub
+        <img src={Logo} alt="Logo" className="Logo" />
       </NavLink>
       <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul className="navbar-nav ml-auto">
