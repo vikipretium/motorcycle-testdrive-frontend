@@ -70,7 +70,7 @@ export const addReservation = createAsyncThunk(
         // Needs to be filled with Auth Header from sign in request
         // Authorization: `Bearer ${process.env.REACT_APP_CARBON_API_KEY}`,
       },
-      body: JSON.stringify(reservationBody)
+      body: JSON.stringify(reservationBody),
       mode: 'cors',
       cache: 'default',
     };
