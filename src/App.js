@@ -1,7 +1,6 @@
 import './App.css';
 import { Outlet } from 'react-router-dom';
 import NavBar from './side_navbar/Navbar';
-import MotorcycleDetails from './pages/MotorcycleDetails';
 
 function App() {
   return (

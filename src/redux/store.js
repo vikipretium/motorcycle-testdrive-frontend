@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
 import motorcycleReducer from './motorcylce/motorcylceSlice';
-import reservationReducer from './reservation/reservationSlice'
+import reservationReducer from './reservation/reservationSlice';
 
 export default configureStore({
   reducer: {
