@@ -11,7 +11,7 @@ export const fetchReservations = createAsyncThunk(
   async (_nill, { rejectWithValue }) => {
     const userId = '4'; // In our next iteration we need to get the
     // userId from the JWT header as I believe its part of the payload
-    const retrieveReservationsAPI = `/api/v1/users/${userId}/reservations`;
+    const retrieveReservationsAPI = `http://localhost:3000/api/v1/users/${userId}/reservations`;
     const requestOptions = {
       method: 'GET',
       headers: {
@@ -37,7 +37,7 @@ export const deleteReservation = createAsyncThunk(
   async (reservationId, { rejectWithValue }) => {
     const userId = '4'; // In our next iteration we need to get the
     // userId from the JWT header as I believe its part of the payload
-    const deleteReservationsAPI = `/api/v1/users/${userId}/reservations/${reservationId}`;
+    const deleteReservationsAPI = `http://localhost:3000/api/v1/users/${userId}/reservations/${reservationId}`;
     const requestOptions = {
       method: 'DELETE',
       headers: {
@@ -59,10 +59,10 @@ export const deleteReservation = createAsyncThunk(
 
 export const addReservation = createAsyncThunk(
   'reservations/addReservations',
-  async (_nill, { rejectWithValue }) => {
+  async (reservationBody, { rejectWithValue }) => {
     const userId = '4'; // In our next iteration we need to get the
     // userId from the JWT header as I believe its part of the payload
-    const addReservationsAPI = `/api/v1/users/${userId}/reservations`;
+    const addReservationsAPI = `http://localhost:3000/api/v1/users/${userId}/reservations`;
     const requestOptions = {
       method: 'POST',
       headers: {
@@ -70,6 +70,7 @@ export const addReservation = createAsyncThunk(
         // Needs to be filled with Auth Header from sign in request
         // Authorization: `Bearer ${process.env.REACT_APP_CARBON_API_KEY}`,
       },
+      body: JSON.stringify(reservationBody)
       mode: 'cors',
       cache: 'default',
     };
