@@ -9,7 +9,7 @@ const initialState = {
 export const fetchMotorcycles = createAsyncThunk(
   'motorcycle/fetchMotorcycles',
   async (_nill, { rejectWithValue }) => {
-    const retrieveCarModelsAPI = 'http://localhost:3000/api/v1/motorcycles';
+    const retrieveMotorcycleAPI = 'http://localhost:3000/api/v1/motorcycles';
     const requestOptions = {
       method: 'GET',
       headers: {
@@ -21,7 +21,7 @@ export const fetchMotorcycles = createAsyncThunk(
       cache: 'default',
     };
     try {
-      const response = await fetch(retrieveCarModelsAPI, requestOptions);
+      const response = await fetch(retrieveMotorcycleAPI, requestOptions);
       const data = await response.json();
       return data.data;
     } catch (err) {
@@ -33,12 +33,6 @@ export const fetchMotorcycles = createAsyncThunk(
 const motorcycleSlice = createSlice({
   name: 'motorcycle',
   initialState,
-  reducers: {
-    setMotorCycles: (state, action) => {
-      const copyState = state;
-      copyState.motorcycles = action.payload;
-    },
-  },
   extraReducers: (builder) => {
     builder.addCase(fetchMotorcycles.pending, (state) => {
       state.isLoading = true;
@@ -53,7 +47,5 @@ const motorcycleSlice = createSlice({
     });
   },
 });
-
-export const { setMotorCycles } = motorcycleSlice.actions;
 
 export default motorcycleSlice.reducer;
