@@ -2,9 +2,10 @@
 import {
   React, useRef, useEffect, useState, useContext,
 } from 'react';
-import { useNavigate, NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import AuthContext from '../context/AuthProvider';
 import axios from '../context/api/axios';
+import AuthPageNav from './AuthPageNav';
 
 const LOGIN_URL = '/api/v1/login';
 
@@ -62,27 +63,7 @@ const Login = () => {
       ) : (
         <div className="wrapper">
           {/* Put all other content in this div  */}
-          <nav className="navbar navbar-expand-lg navbar-light fixed-top">
-            <div className="container">
-              <NavLink className="navbar-brand" to="/sign-in">
-                MotorHub
-              </NavLink>
-              <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul className="navbar-nav ml-auto">
-                  <li className="nav-item">
-                    <NavLink className="nav-link" to="/sign-in">
-                      login
-                    </NavLink>
-                  </li>
-                  <li className="nav-item">
-                    <NavLink className="nav-link" to="/sign-up">
-                      sign up
-                    </NavLink>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+          <AuthPageNav />
           <div className="auth-wrapper">
             <div className="auth-inner">
               <section>
