@@ -29,6 +29,7 @@ body, html, .App, #root, .auth-wrapper {
   justify-content: center;
   flex-direction: column;
   text-align: left;
+  
 }
 
 .auth-inner {
@@ -65,7 +66,32 @@ body, html, .App, #root, .auth-wrapper {
   font-weight: 400;
 }
 
-.homepage {
-  width: 100vw;
-  height: 100vh;
+.Logo {
+  width: 70px;
 }
+
+.navbar-brand {
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-link {
+    display: none;
+  }
+
+  .auth-wrapper {
+    height: 100vh;
+  }
+
+  .auth-inner {
+    width: 80%;
+    margin: auto;
+  }
+
+  .wrapper {
+    background-image: url("https://images.unsplash.com/photo-1525160354320-d8e92641c563?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+    background-size: cover;
+  }
+}
+
