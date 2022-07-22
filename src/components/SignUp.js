@@ -15,7 +15,7 @@ const SignUp = () => {
   const errRef = useRef();
   const navigate = useNavigate();
 
-  const [user, setUser] = useState('');
+  const [name, setName] = useState('');
   const [pwd, setPwd] = useState('');
   const [email, setEmail] = useState('');
   const [errMsg, setErrMsg] = useState('');
@@ -23,12 +23,12 @@ const SignUp = () => {
 
   useEffect(() => {
     setErrMsg('');
-  }, [user, email, pwd]);
+  }, [name, email, pwd]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(REGISTER_URL, JSON.stringify({ full_name: user, email, password: pwd }),
+      const response = await axios.post(REGISTER_URL, JSON.stringify({ full_name: name, email, password: pwd }),
         {
           headers: { 'Content-Type': 'application/Json' },
         });
@@ -36,7 +36,7 @@ const SignUp = () => {
       console.log(response.token);
       console.log(JSON.stringify(response));
       setSuccess(true);
-      setUser('');
+      setName('');
       setPwd('');
       setEmail('');
     } catch (err) {
