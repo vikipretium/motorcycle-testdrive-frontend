@@ -58,13 +58,7 @@ const Login = () => {
   return (
     <>
       {success ? (
-        <section>
-          <h1>you are logged in</h1>
-          <br />
-          <p>
-            <a href="/">go to home</a>
-          </p>
-        </section>
+        navigate('/homepage')
       ) : (
         <section>
           <p ref={errRef} className={errMsg ? 'errmsg' : 'offscreen'} aria-live="assertive">
