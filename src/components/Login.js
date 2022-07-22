@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import {
-  React, useRef, useEffect, useState, useContext
+  React, useRef, useEffect, useState, useContext,
 } from 'react';
 import AuthContext from '../context/AuthProvider';
 import axios from '../context/api/axios';
 
-const LOGIN_URL = '/api/v1/authenticate';
+const LOGIN_URL = '/api/v1/login';
 
 const Login = () => {
   const { setAuth } = useContext(AuthContext);
@@ -27,16 +27,15 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     try {
       const response = await axios.post(LOGIN_URL, JSON.stringify({ email: user, password: pwd }),
         {
-          headers: { 'Content-Type': 'application/json' }
-        }
-      );
+          headers: { 'Content-Type': 'application/json' },
+        });
       console.log(JSON.stringify(response?.data));
       const accessToken = response?.data?.token;
-      setAuth({email, password, accessToken})
+      setAuth({ user, pwd, accessToken });
       setUser('');
       setPwd('');
       setSuccess(true);
@@ -48,7 +47,7 @@ const Login = () => {
       } else if (err.response?.status === 401) {
         setErrMsg('Unathorized');
       } else {
-        setErrMsg('Login Failed')
+        setErrMsg('Login Failed');
       }
       errRef.current.focus();
     }
