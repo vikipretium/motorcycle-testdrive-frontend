@@ -98,6 +98,7 @@ const Login = () => {
                       className="form-control"
                       id="email-address"
                       ref={userRef}
+                      autoComplete="off"
                       onChange={(e) => setUser(e.target.value)}
                       placeholder="Enter your email"
                       value={user}
@@ -109,10 +110,12 @@ const Login = () => {
                     <input
                       type="password"
                       id="password"
+                      autoComplete="off"
                       onChange={(e) => setPwd(e.target.value)}
                       value={pwd}
                       className="form-control"
                       placeholder="Enter password"
+                      required
                     />
                   </div>
                   <div className="d-grid">
@@ -122,6 +125,9 @@ const Login = () => {
                   </div>
                 </form>
               </section>
+            </div>
+          </div>
+        </div>
       )}
     </>
   );

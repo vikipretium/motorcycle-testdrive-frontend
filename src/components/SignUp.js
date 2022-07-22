@@ -108,6 +108,7 @@ const SignUp = () => {
                         className="form-control"
                         onChange={(e) => setEmail(e.target.value)}
                         value={email}
+                        autoComplete="off"
                         placeholder="Enter email"
                         id="email-address"
                         required
@@ -120,6 +121,7 @@ const SignUp = () => {
                         className="form-control"
                         onChange={(e) => setPwd(e.target.value)}
                         value={pwd}
+                        autoComplete="off"
                         placeholder="Enter password"
                         id="password"
                         required
@@ -137,6 +139,9 @@ const SignUp = () => {
                     </p>
                   </form>
                 </section>
+              </div>
+            </div>
+          </div>
         )
 }
     </>
