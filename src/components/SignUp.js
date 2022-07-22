@@ -1,16 +1,14 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable max-len */
-
 import {
   React, useRef, useEffect, useState,
 } from 'react';
 
+const SignUp = () => {
+  const errRef = useRef();
 import axios from '../context/api/axios';
 
 const REGISTER_URL = '/api/v1/register';
 
-const SignUp = () => {
-  const errRef = useRef();
 
   const [user, setUser] = useState('');
   const [pwd, setPwd] = useState('');
@@ -24,28 +22,11 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const response = await axios.post(REGISTER_URL, JSON.stringify({ full_name: user, email, password: pwd }),
-        {
-          headers: { 'Content-Type': 'application/Json' },
-        });
-      console.log(response.data);
-      console.log(response.token);
-      console.log(JSON.stringify(response));
-      setSuccess(true);
-      setUser('');
-      setPwd('');
-      setEmail('');
-    } catch (err) {
-      if (!err?.response) {
-        setErrMsg('No server response');
-      } else if (err.response?.status === 409) {
-        setErrMsg('name taken');
-      } else {
-        setErrMsg('Registration Failed');
-      }
-      errRef.current.focus();
-    }
+    console.log(user, pwd, email);
+    setUser('');
+    setPwd('');
+    setEmail('');
+    setSuccess(true);
   };
 
   return (
