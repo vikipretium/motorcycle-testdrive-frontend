@@ -66,7 +66,7 @@ export const addReservation = createAsyncThunk(
     const requestOptions = {
       method: 'POST',
       headers: {
-        Accept: 'application/json',
+        'Content-Type': 'application/json',
         // Needs to be filled with Auth Header from sign in request
         // Authorization: `Bearer ${process.env.REACT_APP_CARBON_API_KEY}`,
       },
@@ -77,7 +77,7 @@ export const addReservation = createAsyncThunk(
     try {
       const response = await fetch(addReservationsAPI, requestOptions);
       const data = await response.json();
-      return data.data;
+      return data;
     } catch (err) {
       return rejectWithValue('Failed to post data to API');
     }
@@ -117,7 +117,7 @@ const reservationSlice = createSlice({
     });
     builder.addCase(addReservation.fulfilled, (state, action) => {
       state.isLoading = false;
-      state.reservations.push(action.payload);
+      state.reservations.push(action.payload.data);
     });
     builder.addCase(addReservation.rejected, (state, action) => {
       state.isLoading = false;
