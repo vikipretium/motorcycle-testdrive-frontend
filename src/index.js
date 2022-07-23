@@ -6,6 +6,7 @@ import AddReservations from './reservations/addreservation';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Mainpage from './mainpage/mainpage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,6 +14,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
+          <Route path="/" element={<Mainpage />} />
           <Route path="models" element={<ModelsHome />} />
           <Route path="addreservation" element={<AddReservations />} />
         </Route>
