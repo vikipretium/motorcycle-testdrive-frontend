@@ -6,11 +6,11 @@ function App() {
   return (
     <div className="relative min-h-screen md:flex">
       <NavBar />
-      <div>
-        {/* Put all other content in this div  */}
-        <h1>Motocycle Book</h1>
-        <Outlet />
-      </div>
+      {/* <div> */}
+      {/* Put all other content in this div  */}
+
+      <Outlet />
+      {/* </div> */}
     </div>
   );
 }
