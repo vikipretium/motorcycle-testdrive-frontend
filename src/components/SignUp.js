@@ -27,13 +27,10 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(REGISTER_URL, JSON.stringify({ full_name: name, email, password: pwd }),
+      await axios.post(REGISTER_URL, JSON.stringify({ full_name: name, email, password: pwd }),
         {
           headers: { 'Content-Type': 'application/Json' },
         });
-      console.log(response.data);
-      console.log(response.token);
-      console.log(JSON.stringify(response));
       setSuccess(true);
       setName('');
       setPwd('');
