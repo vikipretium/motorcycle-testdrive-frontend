@@ -7,6 +7,7 @@ const AuthPageNav = () => (
     <div className="container">
       <NavLink className="navbar-brand" to="/sign-in">
         <img src={Logo} alt="Logo" className="Logo" />
+        <span className="logo-name">BikeHub</span>
       </NavLink>
       <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul className="navbar-nav ml-auto">

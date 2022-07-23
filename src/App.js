@@ -13,7 +13,7 @@ import { HomePage } from './components/HomePage';
 function App() {
   return (
     <Router>
-      <div className="relative min-h-screen md:flex">
+      <div className="relative min-h-screen md:flex main">
         {/* <NavBar /> Add conditional to show display navbar when user is logged in */}
         <Routes>
           <Route exact path="/" element={<Login />} />

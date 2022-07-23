@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
 
 body {
   min-height: 100vh;
@@ -70,9 +71,16 @@ body, html, .App, #root, .auth-wrapper {
   width: 70px;
 }
 
+.logo-name {
+  font-family: 'Bungee Inline', cursive;
+  font-size: 1.5rem;
+}
+
 .navbar-brand {
   padding: 0;
   margin: 0;
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -86,7 +94,7 @@ body, html, .App, #root, .auth-wrapper {
 
   .auth-inner {
     width: 80%;
-    margin: auto;
+    margin: 2rem auto;
   }
 
   .wrapper {
