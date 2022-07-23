@@ -104,6 +104,11 @@ const Login = () => {
                       submit
                     </button>
                   </div>
+                  <p className="forgot-password text-right">
+                    create an account?
+                    {' '}
+                    <a href="/sign-up">sign up</a>
+                  </p>
                 </form>
               </section>
             </div>
