@@ -30,6 +30,7 @@ body, html, .App, #root, .auth-wrapper {
   justify-content: center;
   flex-direction: column;
   text-align: left;
+  height: 100vh;
   
 }
 
