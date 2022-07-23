@@ -37,8 +37,9 @@ const Login = () => {
           headers: { 'Content-Type': 'application/json' },
         });
       console.log(JSON.stringify(response?.data));
-      const accessToken = response?.data?.token;
-      setAuth({ user, pwd, accessToken });
+      const accessToken = response?.data;
+      const token = accessToken.data;
+      setAuth({ user, pwd, token });
       setUser('');
       setPwd('');
       setSuccess(true);
