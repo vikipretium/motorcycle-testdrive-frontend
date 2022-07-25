@@ -1,6 +1,7 @@
 import './App.css';
 import { Outlet } from 'react-router-dom';
 import NavBar from './side_navbar/Navbar';
+import 'react-multi-carousel/lib/styles.css';
 
 function App() {
   return (
