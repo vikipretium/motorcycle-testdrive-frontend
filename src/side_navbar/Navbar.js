@@ -36,7 +36,7 @@ function NavBar() {
       >
         <p className="py-6"> Logo </p>
         <nav>
-          <Link to="/models">
+          <Link to="/">
             <p className="block py-5 px-5 rounded transition duration 300 hover:bg-blue-500 hover:text-white">
               MODELS
             </p>
