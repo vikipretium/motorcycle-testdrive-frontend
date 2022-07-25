@@ -11,19 +11,16 @@ const UserReservations = () => {
 
   const deleteReservationAction = (event, reservationId) => {
     event.preventDefault();
-    console.log('on delete onclick running', reservationId);
     dispatch(deleteReservation(reservationId));
   };
 
   const motorcycleCollection = new Map();
   if (motorcycleNames?.motorcycles.length) {
-    console.log('map population running');
     motorcycleNames?.motorcycles.map(
       (element) => motorcycleCollection.set(element.id, element.name),
     );
   }
 
-  console.log(reservations, motorcycleNames, motorcycleCollection);
   useEffect(() => {
     dispatch(fetchReservations());
     dispatch(fetchMotorcycles());
