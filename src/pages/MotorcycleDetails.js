@@ -1,20 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
-import { API_BASE_URL } from '../config';
+// import { API_BASE_URL } from '../config';
+import { useSelector } from 'react-redux';
 import NavBar from '../side_navbar/Navbar';
 
 const MotorcycleDetail = () => {
-  const [bike, setbike] = useState({});
   const { motorcycleId } = useParams();
-  const fetchMotorcycle = async () => {
-    const Url = await fetch(`${API_BASE_URL}/motorcycles/${motorcycleId}/`);
-    const data = await Url.json();
-    setbike(data.data);
-  };
-
-  useEffect(() => {
-    fetchMotorcycle();
-  }, []);
+  const motocycles = useSelector((state) => state.motorcycle.motorcycles);
+  const bike = motocycles?.find((item) => item.id === parseInt(motorcycleId, 10));
 
   return (
     <>
