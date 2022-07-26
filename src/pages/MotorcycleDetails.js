@@ -9,3 +9,7 @@ const MotorcycleDetail = () => {
     const data = await Url.json();
     setbike(data.data);
   };
+
+  useEffect(() => {
+    fetchMotorcycle();
+  }, []);
