@@ -9,11 +9,11 @@ const responsive = (desktop, tablet, mobile) => ({
     items: desktop || 3,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
+    breakpoint: { max: 1023, min: 555 },
     items: tablet || 2,
   },
   mobile: {
-    breakpoint: { max: 464, min: 0 },
+    breakpoint: { max: 554, min: 325 },
     items: mobile || 1,
   },
 });
