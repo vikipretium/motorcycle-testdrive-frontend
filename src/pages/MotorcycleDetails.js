@@ -10,15 +10,11 @@ const MotorcycleDetail = () => {
 
   return (
     <>
-      <div className="lg:flex lg:flex-shrink-0">
-        <NavBar />
-      </div>
-      <div className="main-container w-full h-full flex items-center p-4">
-        <div className=" full-image w-3/6">
-          <img src={bike?.image} alt="motorcycleImage" className="image pl-16" />
-        </div>
-        <div className=" content w-1/3 pl-28">
-          <h2 className="font-bold text-3xl">{bike?.name}</h2>
+      <NavBar />
+      <div className="main-container">
+        <img src={bike?.image} alt="motorcycleImage" className="bike-image" />
+        <div className="details-card">
+          <h2 className="font-bold text-3xl title">{bike?.name}</h2>
           <div className="my-3">
             <p className="bg-slate-300 my-2 p-2">
               <span className="font-medium">
