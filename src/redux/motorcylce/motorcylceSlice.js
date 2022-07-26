@@ -1,5 +1,6 @@
 /* eslint-disable no-param-reassign */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { API_BASE_URL } from '../../config';
 
 const initialState = {
   motorcycles: [],
@@ -10,7 +11,7 @@ const initialState = {
 export const fetchMotorcycles = createAsyncThunk(
   'motorcycle/fetchMotorcycles',
   async (_nill, { rejectWithValue }) => {
-    const retrieveMotorcycleAPI = 'http://localhost:3001/api/v1/motorcycles';
+    const retrieveMotorcycleAPI = `${API_BASE_URL}/motorcycles`;
     const requestOptions = {
       method: 'GET',
       headers: {

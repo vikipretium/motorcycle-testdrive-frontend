@@ -20,10 +20,10 @@ function App() {
           <Route path="/" element={<ModelsHome />} />
           <Route path="sign-in" element={<Login />} />
           <Route path="sign-up" element={<SignUp />} />
-          <Route path="/homepage" element={<Mainpage />} />
+          <Route path="homepage" element={<Mainpage />} />
           <Route path="addreservation" element={<AddReservations />} />
           <Route path="myreservations" element={<UserReservations />} />
-          <Route path="/detailspage" element={<MotorcycleDetail />} />
+          <Route path="motorcycle/:motorcycleId" element={<MotorcycleDetail />} />
         </Routes>
       </div>
     </Router>

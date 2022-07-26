@@ -6,7 +6,7 @@ function MainPageCard({ motorcycle }) {
     <Link
       className="no-underline text-black"
       key={motorcycle.id}
-      to={`motorcycle/${motorcycle.id}`}
+      to={`/motorcycle/${motorcycle.id}`}
     >
       <div className="flex flex-col items-center m-10 gap-2">
         <div className="flex rounded-full bg-neutral-300 w-64 h-64 mt-24">
