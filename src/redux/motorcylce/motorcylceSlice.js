@@ -10,7 +10,7 @@ const initialState = {
 export const fetchMotorcycles = createAsyncThunk(
   'motorcycle/fetchMotorcycles',
   async (_nill, { rejectWithValue }) => {
-    const retrieveMotorcycleAPI = 'http://localhost:3000/api/v1/motorcycles';
+    const retrieveMotorcycleAPI = 'http://localhost:3001/api/v1/motorcycles';
     const requestOptions = {
       method: 'GET',
       headers: {
