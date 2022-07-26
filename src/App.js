@@ -9,7 +9,7 @@ import AddReservations from './reservations/addreservation';
 import UserReservations from './reservations/userReservations';
 import ModelsHome from './models/models';
 import Mainpage from './mainpage/mainpage';
-import MotorcycleDetail from './pages/MotorcycleDetails'
+import MotorcycleDetail from './pages/MotorcycleDetails';
 
 function App() {
   return (
