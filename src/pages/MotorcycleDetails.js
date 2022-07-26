@@ -1,6 +1,5 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-// import { API_BASE_URL } from '../config';
 import { useSelector } from 'react-redux';
 import NavBar from '../side_navbar/Navbar';
 
