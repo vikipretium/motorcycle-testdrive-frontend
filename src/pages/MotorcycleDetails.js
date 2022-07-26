@@ -22,7 +22,7 @@ const MotorcycleDetail = () => {
         <NavBar />
       </div>
       <div className="main-container w-full h-full flex items-center p-4">
-        <div className=" full-image w-2/5">
+        <div className=" full-image w-3/6">
           <img src={bike?.image} alt="motorcycleImage" className="image pl-16" />
         </div>
         <div className=" content w-1/3 pl-28">
