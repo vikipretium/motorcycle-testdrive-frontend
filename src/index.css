@@ -131,17 +131,20 @@ html,
   }
 }
 
-@media only screen and (max-width: 768px) and (min-width: 320px)  {
+@media only screen and (max-width: 768px) and (min-width: 320px) {
   /* mobile-devices */
   .main-container {
     flex-direction: column;
   }
+
   .full-image {
     width: 80%;
   }
+
   .content {
     width: 80%;
   }
+
   .font-bold {
     font-weight: bolder;
     font-size: 30px;
