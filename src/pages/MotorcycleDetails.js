@@ -21,10 +21,10 @@ const MotorcycleDetail = () => {
       <div>
         <NavBar />
       </div>
-      <div className="w-3/5 p-4">
+      <div className="w-2/5">
         <img src={bike?.image} alt="motorcycleImage" className="image pl-16" />
       </div>
-      <div className="w-96">
+      <div className="w-1/3 pl-28">
         <h2 className="font-bold text-3xl">{bike?.name}</h2>
         <div className="my-3">
           <p className="bg-slate-300 my-2 p-2">
