@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { API_BASE_URL } from '../config';
+import NavBar from '../side_navbar/Navbar';
 
 const MotorcycleDetail = () => {
   const [bike, setbike] = useState({});
@@ -17,6 +18,9 @@ const MotorcycleDetail = () => {
 
   return (
     <div className="w-full flex items-center p-4">
+      <div>
+        <NavBar />
+      </div>
       <div className="w-3/5 p-4">
         <img src={bike?.image} alt="motorcycleImage" className="image pl-16" />
       </div>
