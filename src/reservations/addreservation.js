@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import jwtDecode from 'jwt-decode';
+import { type } from '@testing-library/user-event/dist/type';
 import NavBar from '../side_navbar/Navbar';
 import { addReservation } from '../redux/reservation/reservationSlice';
 import { fetchMotorcycles } from '../redux/motorcylce/motorcylceSlice';
@@ -8,17 +9,25 @@ import AuthContext from '../context/AuthProvider';
 
 function addreserve() {
   const { auth } = useContext(AuthContext);
-  const { token } = auth;
-  const decoded = jwtDecode(token);
-  const userId = decoded.user_id;
+  let userId;
+  if (!sessionStorage.getItem('userID')) {
+    const { accessToken } = auth;
+    const decoded = jwtDecode(accessToken);
+    userId = decoded.user_id;
+    sessionStorage.setItem('userID', userId);
+  } else {
+    userId = sessionStorage.getItem('userID');
+  }
 
   const [city, setCity] = useState('');
   const [bike, setBike] = useState('');
   const [date, setDate] = useState('');
+  const [alert, setAlert] = useState(false);
 
   const dispatch = useDispatch();
 
   const motorcycles = useSelector((state) => state.motorcycle.motorcycles);
+  const reservations = useSelector((state) => state.reservation);
 
   useEffect(() => {
     if (!motorcycles.length) {
@@ -26,30 +35,29 @@ function addreserve() {
     }
   }, [motorcycles]);
 
-  const reservationBody = {
-    userId,
-    city,
-    bike,
-    date,
-  };
+  useEffect(() => {
+    // when the reservation is made, the alert is displayed for 3 seconds
+    setTimeout(() => {
+      setAlert(false);
+    }, 3000);
+  }, [alert]);
 
   const addReserve = (e) => {
     e.preventDefault();
+    const reservationBody = {
+      user_id: userId,
+      city,
+      motorcycle_id: bike,
+      date,
+    };
     dispatch(addReservation(reservationBody));
-    // console.log({ userId, city, bike, date });
-
-    // the bike id is string - to Alick
-
-    // console.log(reservationBody);
+    setAlert(true)
   };
 
   return (
     <>
-      <div className="h-screen lg:flex lg:overflow-hidden bg-lime-300">
-        <div className="lg:flex lg:flex-shrink-0">
-          <NavBar />
-        </div>
-
+      <NavBar />
+      <div>
         <div className="flex flex-col w-screen flex-1 justify-center text-center w-full">
           <h2>Add Reservation</h2>
           <hr className="w-60 border-4 mx-auto" />
@@ -99,6 +107,12 @@ function addreserve() {
               Reserve
             </button>
           </form>
+          {alert && !reservations.error
+          && (
+          <div className="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800 w-1/2 justify-center" role="alert">
+            <span className="font-medium">Success alert!</span>
+          </div>
+          )}
         </div>
       </div>
     </>
