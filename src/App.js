@@ -9,6 +9,7 @@ import AddReservations from './reservations/addreservation';
 import UserReservations from './reservations/userReservations';
 import ModelsHome from './models/models';
 import Mainpage from './mainpage/mainpage';
+import MotorcycleDetail from './pages/MotorcycleDetails';
 
 function App() {
   return (
@@ -19,9 +20,10 @@ function App() {
           <Route path="/" element={<ModelsHome />} />
           <Route path="sign-in" element={<Login />} />
           <Route path="sign-up" element={<SignUp />} />
-          <Route path="/homepage" element={<Mainpage />} />
+          <Route path="homepage" element={<Mainpage />} />
           <Route path="addreservation" element={<AddReservations />} />
           <Route path="myreservations" element={<UserReservations />} />
+          <Route path="motorcycle/:motorcycleId" element={<MotorcycleDetail />} />
         </Routes>
       </div>
     </Router>

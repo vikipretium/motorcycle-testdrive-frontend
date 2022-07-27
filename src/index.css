@@ -111,7 +111,47 @@ html,
   align-items: center;
 }
 
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.bike-image {
+  max-width: 550px;
+}
+
+.title {
+  font-size: 25px !important;
+  text-align: center;
+}
+
+.details-card {
+  width: 100%;
+  margin-left: 30px;
+  max-width: 600px;
+  background-color: #ffff;
+  box-shadow: 0 14px 80px rgba(34, 35, 58, 0.2);
+  padding: 20px;
+  border-radius: 15px;
+  transition: all 0.3s;
+}
+
 @media screen and (max-width: 768px) {
+  .bike-image {
+    max-width: 300px;
+  }
+
+  .details-card {
+    width: 100%;
+    margin-left: 0;
+    max-width: 300px;
+    padding: 10px;
+  }
+
   .nav-link {
     display: none;
   }
@@ -128,5 +168,32 @@ html,
   .wrapper {
     background-image: url("./imgs/conor-luddy-R2PpxA2j0pQ-unsplash.jpg");
     background-size: cover;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  /* mobile-devices */
+  .main-container {
+    flex-direction: column;
+  }
+
+  .full-image {
+    width: 80%;
+  }
+
+  .content {
+    width: 100%;
+    padding-right: 50px;
+  }
+
+  .font-bold {
+    font-weight: bolder;
+    font-size: 30px;
+  }
+
+  .button {
+    height: 55px;
+    width: 90%;
+    font-size: 23px;
   }
 }
