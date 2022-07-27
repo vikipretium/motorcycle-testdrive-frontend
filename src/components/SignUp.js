@@ -51,7 +51,7 @@ const SignUp = () => {
     <>
       {
         success ? (
-          navigate('/homepage')
+          navigate('/sign-in')
         ) : (
           <div className="wrapper">
             {/* Put all other content in this div  */}
