@@ -61,7 +61,7 @@ export const deleteReservation = createAsyncThunk(
 export const addReservation = createAsyncThunk(
   'reservations/addReservations',
   async (reservationBody, { rejectWithValue }) => {
-    const userId = '4'; // In our next iteration we need to get the
+    const { userId } = reservationBody; // In our next iteration we need to get the
     // userId from the JWT header as I believe its part of the payload
     const addReservationsAPI = `http://localhost:3000/api/v1/users/${userId}/reservations`;
     const requestOptions = {
