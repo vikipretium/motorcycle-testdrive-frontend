@@ -6,7 +6,7 @@
 
 ## Link to the backend
 
-[Book Appoinments Backend](git@github.com:vikipretium/motorcycle-testdrive-backend.git)
+[Motorcycle Appoinments Backend](git@github.com:vikipretium/motorcycle-testdrive-backend.git)
 
 ## Kanban Board
 [Kanban Board]()
@@ -50,7 +50,7 @@
 
 ## Live version
 
-[Book-Appoinments]()
+[Motorcycle-Appoinments]()
 
 ## Getting Started
 
