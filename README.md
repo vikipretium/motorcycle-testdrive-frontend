@@ -12,7 +12,7 @@
 [Kanban Board]()
 
 ## Initial state of kanban board
-[Initial Kanban Board]()
+[Initial Kanban Board](https://github.com/users/vikipretium/projects/1/views/1)
 
 > ***We are a group of four***
 1. Team 1 - [Roshan](https://github.com/roshan-bajgain)
