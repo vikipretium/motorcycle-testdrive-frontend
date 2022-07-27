@@ -9,10 +9,7 @@
 [Motorcycle Appoinments Backend](git@github.com:vikipretium/motorcycle-testdrive-backend.git)
 
 ## Kanban Board
-[Kanban Board]()
-
-## Initial state of kanban board
-[Initial Kanban Board](https://github.com/users/vikipretium/projects/1/views/1)
+[Kanban Board](https://github.com/users/vikipretium/projects/1/views/1)
 
 > ***We are a group of four***
 1. Team 1 - [Roshan](https://github.com/roshan-bajgain)
