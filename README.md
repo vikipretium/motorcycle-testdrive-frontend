@@ -5,7 +5,6 @@
 > The app is the front end version of the Motorcycle booking services. Built with react exclusively. The app fetches data from the api. The app allows you to see tha details of the Motorcylce. You can reserve the best motorcycle of your choice and have a test driving.
 
 ## Link to the backend
-
 [Motorcycle Appoinments Backend](git@github.com:vikipretium/motorcycle-testdrive-backend.git)
 
 ## Kanban Board
