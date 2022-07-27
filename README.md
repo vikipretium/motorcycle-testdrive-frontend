@@ -1,11 +1,11 @@
 ![](https://img.shields.io/badge/thecodechaser-blueviolet)
 
-# Motorcycle Appoinments Frontend
+# Motorcycle Booking Frontend
 
 > The app is the front end version of the Motorcycle booking services. Built with react exclusively. The app fetches data from the api. The app allows you to see tha details of the Motorcylce. You can reserve the best motorcycle of your choice and have a test driving.
 
 ## Link to the backend
-[Motorcycle Appoinments Backend](https://github.com/vikipretium/motorcycle-testdrive-backend)
+[Motorcycle Booking Backend](https://github.com/vikipretium/motorcycle-testdrive-backend)
 
 ## Kanban Board
 [Kanban Board](https://github.com/users/vikipretium/projects/1/views/1)
@@ -26,11 +26,11 @@
 
 ![screenshot]()
 
-### Appoinments Page
+### Booking Page
 
 ![screenshot]()
 
-### Appointments list page
+### Booking list page
 
 ![screenshot]()
 
@@ -46,7 +46,7 @@
 
 ## Live version
 
-[Motorcycle-Appoinments]()
+[Motorcycle-Booking](https://deploy-preview-21--friendly-griffin-f56a5b.netlify.app/)
 
 ## Getting Started
 
