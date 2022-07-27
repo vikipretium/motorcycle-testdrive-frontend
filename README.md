@@ -63,6 +63,7 @@ To get a local copy up and running follow these simple example steps.
 
 ```bash 
 git clone git@github.com:vikipretium/motorcycle-testdrive-frontend.git
+cd motorcycle-testdrive
 
 ```
 
