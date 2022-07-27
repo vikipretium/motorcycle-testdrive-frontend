@@ -2,7 +2,7 @@
 
 # Motorcycle Appoinments Frontend
 
-> 
+> The app is the front end version of the Motorcycle booking services. Built with react exclusively. The app fetches data from the api. The app allows you to see tha details of the Motorcylce. You can reserve the best motorcycle of your choice and have a test driving.
 
 ## Link to the backend
 
@@ -15,7 +15,7 @@
 [Initial Kanban Board]()
 
 > ***We are a group of four***
-1. Team 1 - [Roshan]()
+1. Team 1 - [Roshan](https://github.com/roshan-bajgain)
 2. Team 2 - [Vignesh](https://github.com/vikipretium)
 3. Team 3 - [Alick](https://github.com/Beardless-sheik)
 4. Team 4 - [David](https://github.com/daudi13)
@@ -81,7 +81,6 @@ npm install
 ```bash
 npm start
 ```
-
 
 ## Visit And Open Files
 
