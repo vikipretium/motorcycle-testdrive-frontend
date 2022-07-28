@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import jwtDecode from 'jwt-decode';
-import { type } from '@testing-library/user-event/dist/type';
 import NavBar from '../side_navbar/Navbar';
 import { addReservation } from '../redux/reservation/reservationSlice';
 import { fetchMotorcycles } from '../redux/motorcylce/motorcylceSlice';
@@ -50,12 +49,12 @@ function addreserve() {
       motorcycle_id: bike,
       date,
     };
-    dispatch(addReservation(reservationBody));
+    dispatch(addReservation({ reservationBody, userId }));
     setAlert(true);
   };
 
   return (
-      <NavBar>
+    <NavBar>
       <div>
         <div className="flex flex-col justify-center text-center w-full mx-auto">
           <h2>Add Reservation</h2>
@@ -114,7 +113,7 @@ function addreserve() {
           )}
         </div>
       </div>
-      </NavBar>
+    </NavBar>
   );
 }
 
