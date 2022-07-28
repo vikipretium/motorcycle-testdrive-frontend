@@ -14,16 +14,16 @@ import MotorcycleDetail from './pages/MotorcycleDetails';
 function App() {
   return (
     <Router>
-        <Routes>
-          <Route exact path="/" element={<Login />} />
-          <Route path="/" element={<ModelsHome />} />
-          <Route path="sign-in" element={<Login />} />
-          <Route path="sign-up" element={<SignUp />} />
-          <Route path="homepage" element={<Mainpage />} />
-          <Route path="addreservation" element={<AddReservations />} />
-          <Route path="myreservations" element={<UserReservations />} />
-          <Route path="motorcycle/:motorcycleId" element={<MotorcycleDetail />} />
-        </Routes>
+      <Routes>
+        <Route exact path="/" element={<Login />} />
+        <Route path="/" element={<ModelsHome />} />
+        <Route path="sign-in" element={<Login />} />
+        <Route path="sign-up" element={<SignUp />} />
+        <Route path="homepage" element={<Mainpage />} />
+        <Route path="addreservation" element={<AddReservations />} />
+        <Route path="myreservations" element={<UserReservations />} />
+        <Route path="motorcycle/:motorcycleId" element={<MotorcycleDetail />} />
+      </Routes>
     </Router>
   );
 }
