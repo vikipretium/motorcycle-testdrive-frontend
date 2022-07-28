@@ -44,6 +44,11 @@ html,
 
 .block {
   text-decoration: none;
+  color: black;
+}
+
+.bg-white {
+  z-index: 1;
 }
 
 .navbar-light {
