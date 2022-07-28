@@ -20,19 +20,26 @@
 
 ### Home Page
 
-![screenshot]()
+![screenshot](./src/imgs/main_page.png)
 
 ### Details Page
 
-![screenshot]()
+![screenshot](./src/imgs/Details_page.png)
 
 ### Booking Page
 
-![screenshot]()
+![screenshot](./src/imgs/add_reservation.png)
 
 ### Booking list page
 
-![screenshot]()
+![screenshot](./src/imgs/reservation_list.png)
+
+### Sign Up Page
+
+![screenshot](./src/imgs/sign_up.png)
+
+### Sign In Page
+![screenshot](./src/imgs/sign_in.png)
 
 ## Built With
 
