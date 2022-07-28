@@ -51,14 +51,13 @@ function addreserve() {
       date,
     };
     dispatch(addReservation(reservationBody));
-    setAlert(true)
+    setAlert(true);
   };
 
   return (
-    <>
-      <NavBar />
+      <NavBar>
       <div>
-        <div className="flex flex-col w-screen flex-1 justify-center text-center w-full">
+        <div className="flex flex-col justify-center text-center w-full">
           <h2>Add Reservation</h2>
           <hr className="w-60 border-4 mx-auto" />
           <p>
@@ -67,7 +66,7 @@ function addreserve() {
             selector below.
           </p>
 
-          <form onSubmit={addReserve} className="flex justify-evenly ">
+          <form onSubmit={addReserve} className="flex flex-col justify-evenly w-3/5 gap-3 mx-auto ">
             <select
               name="Location"
               onChange={(e) => setCity(e.target.value)}
@@ -115,7 +114,7 @@ function addreserve() {
           )}
         </div>
       </div>
-    </>
+      </NavBar>
   );
 }
 

@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-function NavBar() {
+function NavBar(props) {
   const [isActive, setActive] = useState(true);
 
   const toggleClassSidebarNavClass = () => {
     setActive(!isActive);
   };
   return (
-    <>
+    <div className="relative min-h-screen md:flex">
       {/* Mobile Menu */}
       <div className="py-3 bg-gradient-to-r from-cyan-600 to-sky-400 text-gray-100 flex justify-between md:hidden">
         <span className="px-2"> Logo </span>
@@ -60,7 +60,7 @@ function NavBar() {
       {/* SideBar Menu */}
       <div
         className={`bg-gradient-to-r from-cyan-600 to-sky-200 text-stone-800 w-48 space-y-4 align-middle
-    justify-center absolute md:relative inset-y-0 left-0 transform lg:translate-x-0 transition duration-300 ease-in-out"
+    justify-center absolute md:relative inset-y-0 left-0 transform md:translate-x-0 transition duration-300 ease-in-out"
      ${isActive ? '-translate-x-full' : null}`}
       >
         <p className="py-6"> Logo </p>
@@ -87,7 +87,8 @@ function NavBar() {
           </Link>
         </nav>
       </div>
-    </>
+      {props.children}
+    </div>
   );
 }
 
