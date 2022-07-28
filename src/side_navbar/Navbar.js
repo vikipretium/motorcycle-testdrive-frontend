@@ -8,7 +8,8 @@ function NavBar(props) {
     setActive(!isActive);
   };
   return (
-    <div className="relative min-h-screen md:flex">
+    <>
+    <div className="relative min-h-screen md:flex w-full">
       {/* Mobile Menu */}
       <div className="py-3 bg-gradient-to-r from-cyan-600 to-sky-400 text-gray-100 flex justify-between md:hidden">
         <span className="px-2"> Logo </span>
@@ -89,6 +90,7 @@ function NavBar(props) {
       </div>
       {props.children}
     </div>
+    </>
   );
 }
 

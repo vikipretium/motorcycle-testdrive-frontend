@@ -57,10 +57,10 @@ function addreserve() {
   return (
       <NavBar>
       <div>
-        <div className="flex flex-col justify-center text-center w-full">
+        <div className="flex flex-col justify-center text-center w-full mx-auto">
           <h2>Add Reservation</h2>
           <hr className="w-60 border-4 mx-auto" />
-          <p>
+          <p className="text-center w-4/5">
             There are 10 different models of super bikes. If you wish to find
             out if a test-ride is available in your area, please use the
             selector below.
