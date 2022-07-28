@@ -17,10 +17,7 @@ function Mainpage() {
   }, [motorcycles]);
 
   return (
-    <div className="h-screen lg:flex lg:overflow-hidden ">
-      <div className="lg:flex lg:flex-shrink-0">
-        <NavBar />
-      </div>
+    <NavBar>
       <div className="flex flex-col min-w-0 flex-1 justify-center text-center w-full">
         <h2 className="font-bold text-3xl">SUPERBIKE MODELS</h2>
         <span>Please select a superbike model</span>
@@ -40,7 +37,7 @@ function Mainpage() {
           </Carousel>
         </div>
       </div>
-    </div>
+    </NavBar>
   );
 }
 
