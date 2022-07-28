@@ -27,9 +27,9 @@ const UserReservations = () => {
   }, []);
 
   return (
-    <div className="container w-full">
+    <div className="container border-black w-full">
       <h1 className="text-center my-4 p-2 text-lg"> MY RESERVATIONS </h1>
-      <div className="grid grid-cols-4 gap-4 mx-auto text-center">
+      <div className="bg-neutral-400 rounded-lg grid grid-cols-4 gap-4 mx-auto text-center">
         <div> BIKE </div>
         <div> CITY </div>
         <div> DATE </div>
