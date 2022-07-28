@@ -8,5 +8,5 @@ jest.mock('./card');
 test('should render card component', () => {
   render(<Card />);
   const cardElement = screen.queryByTestId('cardtest');
-  expect(cardElement)
-})
+  expect(cardElement);
+});
