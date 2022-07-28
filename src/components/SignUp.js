@@ -55,7 +55,7 @@ const SignUp = () => {
       {success ? (
         navigate('/sign-in')
       ) : (
-        <div className="wrapper">
+        <div data-testid="signuptest" className="wrapper">
           {/* Put all other content in this div  */}
           <AuthPageNav />
           <div className="auth-wrapper">

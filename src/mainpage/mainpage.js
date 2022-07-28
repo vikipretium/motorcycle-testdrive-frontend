@@ -18,7 +18,7 @@ function Mainpage() {
 
   return (
     <NavBar>
-      <div className="flex flex-col min-w-0 flex-1 justify-center text-center w-full">
+      <div data-testid="mainpagetest" className="flex flex-col min-w-0 flex-1 justify-center text-center w-full">
         <h2 className="font-bold text-3xl">SUPERBIKE MODELS</h2>
         <span>Please select a superbike model</span>
         <hr className="w-20 border-t-4 border-dotted mx-auto" />

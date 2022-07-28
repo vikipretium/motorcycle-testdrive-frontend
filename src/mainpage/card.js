@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function MainPageCard({ motorcycle }) {
   return (
-    <div className="flex flex-col items-center m-10 gap-2">
+    <div data-testid="cardtest" className="flex flex-col items-center m-10 gap-2">
       <Link
         className="no-underline text-black"
         key={motorcycle.id}

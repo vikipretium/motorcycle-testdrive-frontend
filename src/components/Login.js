@@ -60,7 +60,7 @@ const Login = () => {
       {success ? (
         navigate('/homepage')
       ) : (
-        <div className="wrapper">
+        <div data-testid="logintest" className="wrapper">
           {/* Put all other content in this div  */}
           <AuthPageNav />
           <div className="auth-wrapper">

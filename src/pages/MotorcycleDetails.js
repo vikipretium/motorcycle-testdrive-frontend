@@ -13,7 +13,7 @@ const MotorcycleDetail = () => {
   return (
     <>
       <NavBar>
-        <div className="main-container">
+        <div data-testid="motorcycledetailstest" className="main-container">
           <img src={bike?.image} alt="motorcycleImage" className="bike-image" />
           <div className="details-card">
             <h2 className="font-bold text-3xl title">{bike?.name}</h2>
