@@ -14,18 +14,16 @@ import MotorcycleDetail from './pages/MotorcycleDetails';
 function App() {
   return (
     <Router>
-      <div className="relative min-h-screen md:flex main">
-        <Routes>
-          <Route exact path="/" element={<Login />} />
-          <Route path="/" element={<ModelsHome />} />
-          <Route path="sign-in" element={<Login />} />
-          <Route path="sign-up" element={<SignUp />} />
-          <Route path="homepage" element={<Mainpage />} />
-          <Route path="addreservation" element={<AddReservations />} />
-          <Route path="myreservations" element={<UserReservations />} />
-          <Route path="motorcycle/:motorcycleId" element={<MotorcycleDetail />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route exact path="/" element={<Login />} />
+        <Route path="/" element={<ModelsHome />} />
+        <Route path="sign-in" element={<Login />} />
+        <Route path="sign-up" element={<SignUp />} />
+        <Route path="homepage" element={<Mainpage />} />
+        <Route path="addreservation" element={<AddReservations />} />
+        <Route path="myreservations" element={<UserReservations />} />
+        <Route path="motorcycle/:motorcycleId" element={<MotorcycleDetail />} />
+      </Routes>
     </Router>
   );
 }

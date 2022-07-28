@@ -1,5 +1,6 @@
 /* eslint-disable no-param-reassign */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { API_BASE_URL } from '../../config';
 
 const initialState = {
   reservations: [],
@@ -9,10 +10,8 @@ const initialState = {
 
 export const fetchReservations = createAsyncThunk(
   'reservations/fetchReservations',
-  async (_nill, { rejectWithValue }) => {
-    const userId = '4'; // In our next iteration we need to get the
-    // userId from the JWT header as I believe its part of the payload
-    const retrieveReservationsAPI = `http://localhost:3000/api/v1/users/${userId}/reservations`;
+  async (userId, { rejectWithValue }) => {
+    const retrieveReservationsAPI = `${API_BASE_URL}/users/${userId}/reservations`;
     const requestOptions = {
       method: 'GET',
       headers: {
@@ -35,10 +34,8 @@ export const fetchReservations = createAsyncThunk(
 
 export const deleteReservation = createAsyncThunk(
   'reservations/deleteReservations',
-  async (reservationId, { rejectWithValue }) => {
-    const userId = '4'; // In our next iteration we need to get the
-    // userId from the JWT header as I believe its part of the payload
-    const deleteReservationsAPI = `http://localhost:3000/api/v1/users/${userId}/reservations/${reservationId}`;
+  async ({ reservationId, userId }, { rejectWithValue }) => {
+    const deleteReservationsAPI = `${API_BASE_URL}/users/${userId}/reservations/${reservationId}`;
     const requestOptions = {
       method: 'DELETE',
       headers: {
@@ -60,10 +57,8 @@ export const deleteReservation = createAsyncThunk(
 
 export const addReservation = createAsyncThunk(
   'reservations/addReservations',
-  async (reservationBody, { rejectWithValue }) => {
-    const userId = '4'; // In our next iteration we need to get the
-    // userId from the JWT header as I believe its part of the payload
-    const addReservationsAPI = `http://localhost:3000/api/v1/users/${userId}/reservations`;
+  async ({ reservationBody, userId }, { rejectWithValue }) => {
+    const addReservationsAPI = `${API_BASE_URL}/users/${userId}/reservations`;
     const requestOptions = {
       method: 'POST',
       headers: {
