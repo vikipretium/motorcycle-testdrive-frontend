@@ -53,7 +53,7 @@
 
 ## Live version
 
-[Motorcycle-Booking](https://motorcycle-testdrive-frontend-nbw7ea674-vikipretium.vercel.app/)
+[Motorcycle-Booking](https://bikehub.vercel.app/)
 
 ## Getting Started
 
