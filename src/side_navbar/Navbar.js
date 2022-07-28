@@ -14,7 +14,10 @@ function NavBar({ children }) {
       <div className="relative min-h-screen md:flex w-full">
         {/* Mobile Menu */}
         <div className="py-3 text-black flex justify-between md:hidden">
-          <NavLink className="navbar-brand flex flex-col justify-center" to="/homepage">
+          <NavLink
+            className="navbar-brand flex flex-col justify-center"
+            to="/homepage"
+          >
             <img src={Logo} alt="Logo" className="Logo" />
           </NavLink>
           {isActive ? (
@@ -68,7 +71,10 @@ function NavBar({ children }) {
     justify-center absolute md:relative inset-y-0 left-0 transform lg:translate-x-0 transition duration-300 ease-in-out z-1"
      ${isActive ? '-translate-x-full' : null}`}
         >
-          <NavLink className="navbar-brand flex flex-col justify-center" to="/homepage">
+          <NavLink
+            className="navbar-brand flex flex-col justify-center"
+            to="/homepage"
+          >
             <img src={Logo} alt="Logo" className="Logo" />
             <span className="logo-name">BikeHub</span>
           </NavLink>
@@ -88,7 +94,7 @@ function NavBar({ children }) {
                 RESERVATIONS
               </p>
             </NavLink>
-            <NavLink to="/auth" className="no-underline">
+            <NavLink to="/sign-in" className="no-underline">
               <p className="block py-3 px-5 rounded transition duration 300 hover:bg-lime-400 hover:text-white">
                 SIGN OUT
               </p>
