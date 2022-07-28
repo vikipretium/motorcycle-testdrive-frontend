@@ -65,19 +65,17 @@ function addreserve() {
             selector below.
           </p>
 
-          <form onSubmit={addReserve} className="flex flex-col justify-evenly w-3/5 gap-3 mx-auto ">
-            <select
+          <form
+            onSubmit={addReserve}
+            className="flex flex-col justify-evenly w-3/5 gap-3 mx-auto "
+          >
+            <textarea
               name="Location"
               onChange={(e) => setCity(e.target.value)}
               value={city}
               required
               className="px-5 py-2 rounded-full bg-lime-300 border border-4 border-white"
-            >
-              <option value="city1">city1</option>
-              <option value="city1">city2</option>
-              <option value="city1">city3</option>
-              <option value="city1">city4</option>
-            </select>
+            />
             <select
               name="Bike models"
               onChange={(e) => setBike(e.target.value)}
@@ -105,11 +103,13 @@ function addreserve() {
               Reserve
             </button>
           </form>
-          {alert && !reservations.error
-          && (
-          <div className="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800 w-1/2 justify-center" role="alert">
-            <span className="font-medium">Success alert!</span>
-          </div>
+          {alert && !reservations.error && (
+            <div
+              className="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800 w-1/2 justify-center"
+              role="alert"
+            >
+              <span className="font-medium">Success alert!</span>
+            </div>
           )}
         </div>
       </div>
