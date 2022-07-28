@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import Logo from '../imgs/logo_plain.svg';
 
 function NavBar() {
   const [isActive, setActive] = useState(true);
@@ -10,8 +11,10 @@ function NavBar() {
   return (
     <>
       {/* Mobile Menu */}
-      <div className="py-3 bg-gradient-to-r from-cyan-600 to-sky-400 text-gray-100 flex justify-between md:hidden">
-        <span className="px-2"> Logo </span>
+      <div className="py-3 text-black flex justify-between md:hidden">
+        <NavLink className="navbar-brand flex flex-col justify-center" to="/homepage">
+          <img src={Logo} alt="Logo" className="Logo" />
+        </NavLink>
         {isActive ? (
           <button
             type="button"
@@ -59,32 +62,35 @@ function NavBar() {
 
       {/* SideBar Menu */}
       <div
-        className={`bg-gradient-to-r from-cyan-600 to-sky-200 text-stone-800 w-48 space-y-4 align-middle
-    justify-center absolute md:relative inset-y-0 left-0 transform lg:translate-x-0 transition duration-300 ease-in-out"
+        className={`bg-white border-r-2 w-48 space-y-4 align-middle
+    justify-center absolute md:relative inset-y-0 left-0 transform lg:translate-x-0 transition duration-300 ease-in-out z-1"
      ${isActive ? '-translate-x-full' : null}`}
       >
-        <p className="py-6"> Logo </p>
-        <nav>
-          <Link to="/homepage">
-            <p className="block py-5 px-5 rounded transition duration 300 hover:bg-blue-500 hover:text-white">
+        <NavLink className="navbar-brand flex flex-col justify-center" to="/homepage">
+          <img src={Logo} alt="Logo" className="Logo" />
+          <span className="logo-name">BikeHub</span>
+        </NavLink>
+        <nav className="pt-24">
+          <NavLink to="/homepage" className="no-underline">
+            <p className="block py-3 px-5 rounded transition duration 300 hover:bg-lime-400 hover:text-white">
               MODELS
             </p>
-          </Link>
-          <Link to="/addreservation">
-            <p className="block py-5 px-5 rounded transition duration 300 hover:bg-blue-500 hover:text-white">
+          </NavLink>
+          <NavLink to="/addreservation" className="no-underline">
+            <p className="block py-3 px-5 rounded transition duration 300 hover:bg-lime-400 hover:text-white">
               RESERVE
             </p>
-          </Link>
-          <Link to="/myreservations">
-            <p className="block py-5 px-5 rounded transition duration 300 hover:bg-blue-500 hover:text-white">
+          </NavLink>
+          <NavLink to="/myreservations" className="no-underline">
+            <p className="block py-3 px-5 rounded transition duration 300 hover:bg-lime-400 hover:text-white">
               RESERVATIONS
             </p>
-          </Link>
-          <Link to="/auth">
-            <p className="block py-5 px-5 rounded transition duration 300 hover:bg-blue-500 hover:text-white">
+          </NavLink>
+          <NavLink to="/auth" className="no-underline">
+            <p className="block py-3 px-5 rounded transition duration 300 hover:bg-lime-400 hover:text-white">
               SIGN OUT
             </p>
-          </Link>
+          </NavLink>
         </nav>
       </div>
     </>
