@@ -53,7 +53,7 @@
 
 ## Live version
 
-[Motorcycle-Booking](https://deploy-preview-24--friendly-griffin-f56a5b.netlify.app/)
+[Motorcycle-Booking](https://motorcycle-testdrive-frontend-nbw7ea674-vikipretium.vercel.app/)
 
 ## Getting Started
 
