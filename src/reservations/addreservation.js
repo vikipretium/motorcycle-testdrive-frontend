@@ -83,6 +83,10 @@ function addreserve() {
               required
               className="px-5 py-2 rounded-full bg-lime-300 border border-4 border-white"
             >
+              <option value="" default>
+                Choose Model
+              </option>
+
               {motorcycles.map((item) => (
                 <option key={item.id} value={item.id}>
                   {item.name}
