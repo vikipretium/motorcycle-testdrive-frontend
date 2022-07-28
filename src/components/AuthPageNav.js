@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import Logo from '../imgs/logo_plain.svg';
 
 const AuthPageNav = () => (
-  <nav className="navbar navbar-expand-lg navbar-light fixed-top collapse.navbar-collapse">
+  <nav data-testid="navigation" className="navbar navbar-expand-lg navbar-light fixed-top collapse.navbar-collapse">
     <div className="container">
       <NavLink className="navbar-brand" to="/sign-in">
         <img src={Logo} alt="Logo" className="Logo" />
