@@ -18,6 +18,10 @@
 
 ## Preview:
 
+### Multi device Compatibility
+
+![screenshot](./src/imgs/all-in-one.png)
+
 ### Home Page
 
 ![screenshot](./src/imgs/main_page.png)
